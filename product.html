@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.css" />
+</head>
+<body>
+	
+	<script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js"></script>
+	<div id="snipcart" data-config-modal-style="side" data-api-key="OWJmMGE3ZTYtYWZlNi00MGY3LTlkNDEtZTkzYTU1MmU1OTg1NjM3NDgzOTY2NzAyNzg2MTcy" hidden></div>
+	
+	<div class="product-details">
+		<section>
+			<h1>Polka Dot Mask</h1>
+			<div class="photo-gallery">
+				<div class="primary-photo" style="background-image: url(/images/mask.jpg);">
+					
+				</div>
+				<img src="/images/black-mask.png" alt="" />
+				<img src="/images/grey-mask.png" alt="" />
+				<img src="/images/red-mask.png" alt="" />
+				<img src="/images/medical-mask.png" alt="" />
+			</div>
+		</section>
+		<section>
+			<hgroup>
+				<h2>$24.95</h2>
+				<p>Blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah.</p>
+			</hgroup>
+			<form method="post" action="">
+				<label>
+					
+					<input type="radio" name="size" value="Small" checked/>
+					<strong>Small</strong>
+				</label>
+				<label>
+					
+					<input type="radio" name="size" value="Medium" />
+					<strong>Medium</strong>
+				</label>
+				<label>
+					
+					<input type="radio" name="size" value="Large" />
+					<strong>Large</strong>
+				</label>
+				<a href="#" class="button snipcart-add-item"
+				  data-item-id="starry-night"
+				  data-item-price="79.99"
+				  data-item-url="/paintings/starry-night"
+				  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+				  data-item-image="/assets/images/starry-night.jpg"
+				  data-item-name="The Starry Night"
+				  data-item-custom1-name="Size"
+  				  data-item-custom1-options="Small|Medium|Large">
+				  Add To Cart</a>
+			</form>
+		</section>
+	</div>
+	
+	
+	<script type="text/javascript">
+		$( ".photo-gallery > img" ).click(function() {
+			var imgSrc= $(this).attr("src");
+			$('.primary-photo').attr('style',"background-image: url("+imgSrc+");");
+		});
+		
+		
+		$( ".product-details form input" ).change(function() {
+			var productSize= $(this).val();
+			$('.snipcart-add-item').attr('data-item-custom1-value',productSize);
+		});
+	
+		
+	</script>
+</body>
+</html>

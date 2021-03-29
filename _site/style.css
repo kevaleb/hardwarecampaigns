@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    
+}
+.banner {
+    position: relative;
+    background: #ff1166 url(/images/mask.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    white-space: nowrap;
+}
+.banner:before {
+    content: '\00a0';
+    display: inline-block;
+    height: 100%;
+    width: 0px;
+    vertical-align: middle;
+}
+.banner:after {
+    content: '\00a0';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5)
+}
+.banner > hgroup {
+    position: relative;
+    display: inline-block;
+    max-width: 800px;
+    margin: 0 auto 24px 0;
+    vertical-align: middle;
+    white-space: normal;
+    z-index: 100;
+}
+.banner > hgroup > h1 {
+    color: #fff;
+    font: 900 58px/60px 'Satisfy', cursive, arial;
+    text-shadow: 0px 2px 3px rgba(0,0,0,.25);
+}
+.banner > hgroup > h2 {
+    color: #fff;
+    font: 100 30px/36px arial;
+    text-transform: capitalize;
+    text-shadow: 0px 2px 3px rgba(0,0,0,.25);
+}
+.banner > hgroup > a {
+    display: inline-block;
+    background-color: #ff1166;
+    border-radius: 24px;
+    margin: 12px 0 0 0;
+    padding: 9px 24px;
+    color: #fff;
+    font: 500 24px/36px arial;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.banner > hgroup > a:hover {
+    background: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-grid {
+    overflow: hidden;
+    white-space: normal;
+    width: 100%;
+    padding: 24px;
+	
+	/*columns: 150px 3;*/
+}
+.product-grid > li {
+	display: block;
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding: 24px;
+    margin: 0;
+	
+	/*-webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;*/
+}
+.product-grid > li > a {
+    display: block;
+    position: relative;
+    width: 100%;
+    background: #f2f2f2;
+    padding: 24px;
+    border-radius: 9px;
+    text-decoration: none;
+    color: #000;
+}
+.product-grid > li > a > img {
+    position: relative;
+    left: -15%;
+    top: -48px;
+    width: 130%;
+    
+    transition: top 3s ease-out; 
+}
+.product-grid > li > a > img:hover {
+    top: -96px;
+    transition: top .5s ease-out;
+}
+.product-grid > li > a > hgroup {
+    
+}
+.product-grid > li > a > hgroup > h3 {
+    font: 400 36px/60px 'Satisfy', cursive, arial;
+}
+.product-grid > li > a > hgroup > h4 {
+    font: 300 30px/24px 'Montserrat', sans-serif;
+}
+.product-grid > li > a > span.quantity {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    width: 50px;
+    height: 50px;
+    padding: 4px 0 0 0;
+    background-color: #fff;
+    border: 4px solid #f16;
+    border-radius: 96px;
+    box-shadow: 0px 0px 0px 5px #fff;
+    font: 700 18px/18px 'Montserrat', sans-serif;
+    color: #f16;
+    text-align: center;
+}
+.product-grid > li > a > span.quantity:after {
+    content: "LEFT";
+    display: block;
+    font: 700 10px/12px 'Montserrat', sans-serif;
+}
+
+
+@media all and (max-width: 600px) {
+
+.product-grid > li {
+	float: none;
+	width: 100%;
+}
+
+}
+
+@media all and (min-width: 601px) {
+
+.product-grid {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+}
+
+
+
+
+
+
+
+
+
+.product-details {
+	padding: 12px;
+	text-align: center;
+}
+.product-details > section {
+	display: inline-block;
+	vertical-align: middle;
+	width: 49%;
+	max-width: 540px;
+	padding: 12px;
+	text-align: center;
+}
+.product-details > section > h1 {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+.product-details > section > .photo-gallery {
+	text-align: center;
+}
+.product-details > section > .photo-gallery > .primary-photo {
+	height: 320px;
+	width: 100%;
+	/*max-width: 480px;*/
+	margin: 0 auto;
+	background-size: cover;
+	background-position: center;
+	border-radius: 9px;
+	border: 3px solid #fff;
+}
+.product-details > section > .photo-gallery > img {
+	position: relative;
+	top: 0;
+	float: left;
+	/*width: 100%;*/
+	height: 100%;
+	max-width: 25%;
+	max-height: 96px;
+	/*margin: 6px 3px;*/
+	border-radius: 3px;
+	border: 3px solid #fff;
+	transition: all .3s ease-in-out 0s;
+	background-color: #f2f2f2;
+	border-radius: 6px;
+	padding: 6px;
+}
+.product-details > section > .photo-gallery > img:hover {
+	top: -12px;
+}
+.product-details > section > hgroup {
+	
+}
+.product-details > section > hgroup > h2 {
+	
+}
+.product-details > section > hgroup > p {
+	
+}
+.product-details > section > form {
+	padding: 12px;
+	margin: 24px 0 0 0;
+}
+.product-details > section > form > label {
+	
+}
+.product-details > section > form > label > input {
+	
+}
+.product-details > section > form > .button {
+	display: block;
+	max-width: 160px;
+	margin: 24px auto 0 auto;
+	background: #f16;
+	border-radius: 3px;
+	padding: 6px 12px;
+	font: 900 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+
+@media all and (max-width: 720px) {
+
+.product-details > section {
+	width: 100%;
+}
+
+}
+
+
+
+
+
+
+
+
