@@ -32,21 +32,21 @@
 				<p>Blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah.</p>
 			</hgroup>
 			<form method="post" action="">
+				
 				<label>
-					
-					<input type="radio" name="size" value="Small" checked/>
+					<input type="radio" name="size" value="Small" data-variant="8318" checked/>
 					<strong>Small</strong>
 				</label>
 				<label>
-					
-					<input type="radio" name="size" value="Medium" />
+					<input type="radio" name="size" value="Medium" data-variant="8319" />
 					<strong>Medium</strong>
 				</label>
 				<label>
-					
-					<input type="radio" name="size" value="Large" />
+					<input type="radio" name="size" value="Large" data-variant="8320" />
 					<strong>Large</strong>
 				</label>
+				
+				
 				<a href="#" class="button snipcart-add-item"
 				  data-item-id="starry-night"
 				  data-item-price="79.99"
@@ -55,12 +55,15 @@
 				  data-item-image="/assets/images/starry-night.jpg"
 				  data-item-name="The Starry Night"
 				  data-item-custom1-name="Size"
-  				  data-item-custom1-options="Small|Medium|Large">
+  				  data-item-custom1-options="Small|Medium|Large"
+  				  data-item-custom2-name="variant"
+  				  data-item-custom2-type="hidden"
+  				  data-item-custom2-value="">
+				  
 				  Add To Cart</a>
 			</form>
 		</section>
 	</div>
-	
 	
 	<script type="text/javascript">
 		$( ".photo-gallery > img" ).click(function() {
@@ -72,6 +75,8 @@
 		$( ".product-details form input" ).change(function() {
 			var productSize= $(this).val();
 			$('.snipcart-add-item').attr('data-item-custom1-value',productSize);
+			var variant= $(this).data('variant');
+			$('.snipcart-add-item').attr('data-item-custom2-value',variant);
 		});
 	
 		
